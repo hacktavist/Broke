@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 74fe4f1fb7098e943841c3c6875ece2a
+timeCreated: 1453842228
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: abdomen
+    100002: abdomen 1
+    100004: abdomen2
+    100006: abdomen2 1
+    100008: chest
+    100010: chest 1
+    100012: Genesis2Female
+    100014: head
+    100016: head 1
+    100018: hip
+    100020: hip 1
+    100022: KeikoPCap
+    100024: KeikoPCap.Shape
+    100026: KeikoPonytail
+    100028: //RootNode
+    100030: KeikoPonytail.Shape_LOD0
+    100032: KeikoPonytail.Shape_LOD1
+    100034: KeikoPonytail.Shape_LOD2
+    100036: KeikoPonytail.Shape_LOD3
+    100038: lCollar
+    100040: lCollar 1
+    100042: neck
+    100044: neck 1
+    100046: rCollar
+    100048: rCollar 1
+    100050: KeikoP_CAP.Shape
+    100052: Genesis 2 Female
+    400000: abdomen
+    400002: abdomen 1
+    400004: abdomen2
+    400006: abdomen2 1
+    400008: chest
+    400010: chest 1
+    400012: Genesis2Female
+    400014: head
+    400016: head 1
+    400018: hip
+    400020: hip 1
+    400022: KeikoPCap
+    400024: KeikoPCap.Shape
+    400026: //RootNode
+    400028: KeikoPonytail
+    400030: KeikoPonytail.Shape_LOD0
+    400032: KeikoPonytail.Shape_LOD1
+    400034: KeikoPonytail.Shape_LOD2
+    400036: KeikoPonytail.Shape_LOD3
+    400038: lCollar
+    400040: lCollar 1
+    400042: neck
+    400044: neck 1
+    400046: rCollar
+    400048: rCollar 1
+    400050: KeikoP_CAP.Shape
+    400052: Genesis 2 Female
+    4300000: KeikoPonytail.Shape_LOD0
+    4300002: KeikoPonytail.Shape_LOD1
+    4300004: KeikoPonytail.Shape_LOD2
+    4300006: KeikoPonytail.Shape_LOD3
+    4300008: KeikoPCap.Shape
+    4300010: KeikoP_CAP.Shape
+    9500000: //RootNode
+    11400000: KeikoPCap
+    11400002: KeikoPCap
+    11400004: KeikoPCap.Shape
+    11400006: KeikoPonytail
+    11400008: KeikoPonytail
+    11400010: KeikoPonytail.Shape_LOD0
+    11400012: KeikoPonytail.Shape_LOD1
+    11400014: KeikoPonytail.Shape_LOD2
+    11400016: KeikoPonytail.Shape_LOD3
+    11400018: KeikoP_CAP.Shape
+    11400020: KeikoP_CAP.Shape
+    11400022: KeikoP_CAP.Shape
+    11400024: //RootNode
+    13700000: KeikoPCap.Shape
+    13700002: KeikoPonytail.Shape_LOD0
+    13700004: KeikoPonytail.Shape_LOD1
+    13700006: KeikoPonytail.Shape_LOD2
+    13700008: KeikoPonytail.Shape_LOD3
+    13700010: KeikoP_CAP.Shape
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
