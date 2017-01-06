@@ -50,39 +50,78 @@ public class CheatTest : MonoBehaviour {
       }
 
     } else {
-      if (controller.GetButtonDown("dLeft")) {
+
+      /* This is the work around for controller cheats */
+      //  if(Input.GetButtonDown("Jump")) {
+      //  tempKey = "jump";
+      //}
+
+
+      if (controller.GetButtonDown("dLeft"))
+      {
         tempKey = "left";
-      } else if (controller.GetButtonDown("dRight")) {
+      }
+      else if (controller.GetButtonDown("dRight"))
+      {
         tempKey = "right";
-      } else if (controller.GetButtonDown("dUp")) {
+      }
+      else if (controller.GetButtonDown("dUp"))
+      {
         tempKey = "up";
-      } else if (controller.GetButtonDown("dDown")) {
+      }
+      else if (controller.GetButtonDown("dDown"))
+      {
         tempKey = "down";
-      } else if (controller.GetButtonDown("A")) {
+      }
+      else if (controller.GetButtonDown("A"))
+      {
         tempKey = "jump";
-      } else if (controller.GetButtonDown("B")) {
+      }
+      else if (controller.GetButtonDown("B"))
+      {
         tempKey = "interact";
-      } else if (controller.GetButtonDown("X")) {
+      }
+      else if (controller.GetButtonDown("X"))
+      {
         tempKey = "melee";
-      } else if (controller.GetButtonDown("Y")) {
+      }
+      else if (controller.GetButtonDown("Y"))
+      {
         tempKey = "switch";
-      } else if (controller.GetButtonDown("Start")) {
+      }
+      else if (controller.GetButtonDown("Start"))
+      {
         tempKey = "menu";
-      } else if (controller.GetButtonDown("Back")) {
+      }
+      else if (controller.GetButtonDown("Back"))
+      {
         tempKey = "options";
-      } else if (controller.GetTriggerTapLeft()) {
+      }
+      else if (controller.GetTriggerTapLeft())
+      {
         tempKey = "walk";
-      } else if (controller.GetTriggerTapRight()) {
+      }
+      else if (controller.GetTriggerTapRight())
+      {
         tempKey = "shoot";
-      } else if (controller.GetButtonDown("lBumper")) {
+      }
+      else if (controller.GetButtonDown("lBumper"))
+      {
         tempKey = "";
-      } else if (controller.GetButtonDown("rBumper")) {
+      }
+      else if (controller.GetButtonDown("rBumper"))
+      {
         tempKey = "";
-      } else if (controller.GetButtonDown("L3")) {
+      }
+      else if (controller.GetButtonDown("L3"))
+      {
         tempKey = "";
-      } else if (controller.GetButtonDown("R3")) {
+      }
+      else if (controller.GetButtonDown("R3"))
+      {
         tempKey = "";
-      } else
+      }
+      else
         tempKey = "";
     }
     #endregion
@@ -104,7 +143,7 @@ public class CheatTest : MonoBehaviour {
       //cheats[i].sequenceMatched = false;
       Debug.Log(code.nameOfCheat);
       if (Time.time > code.cheatDelay + timeLastButtonPressed) {
-        currentPosition = 0;
+        code.currentPosition = 0;
       }
       if (code.currentPosition < code.cheatSequence.Length) {
         Debug.Log("code " + code.cheatSequence[code.currentPosition]);

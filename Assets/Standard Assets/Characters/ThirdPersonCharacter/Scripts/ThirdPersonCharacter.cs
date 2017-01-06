@@ -39,6 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
       } else if(c.gameObject.name == "NextLevelTrigger") {
         Debug.Log("Next Level");
         SceneManager.LoadScene("Test Scene 2");
+        Physics.gravity = -Physics.gravity;
       } 
     }
 		void Start()
