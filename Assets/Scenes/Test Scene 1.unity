@@ -1225,6 +1225,16 @@ Prefab:
       propertyPath: m_JumpPower
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013915149186, guid: 18d51e06191e8dc44a0e4e2ad72e6a20,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010215359586, guid: 18d51e06191e8dc44a0e4e2ad72e6a20,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18d51e06191e8dc44a0e4e2ad72e6a20, type: 2}
   m_IsPrefabParent: 0
