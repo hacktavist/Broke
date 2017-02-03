@@ -24,6 +24,9 @@ public class CharacterController : MonoBehaviour {
     public string JUMP_AXIS = "Jump";
   }
 
+  public Animator anim;
+  
+
   public MoveSettings moveSetting = new MoveSettings();
   public PhysicsSettings physicsSetting = new PhysicsSettings();
   public InputSettings inputSetting = new InputSettings();
@@ -42,6 +45,7 @@ public class CharacterController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+    anim = GetComponent<Animator>();
     targetRotation = transform.rotation;
     if(GetComponent<Rigidbody>())
       rbody = GetComponent<Rigidbody>();
@@ -72,12 +76,13 @@ public class CharacterController : MonoBehaviour {
   }
 
   void Run() {
-    if(Mathf.Abs(forwardInput) > inputSetting.inputDelay) {
+    //if(Mathf.Abs(forwardInput) > inputSetting.inputDelay) {
       //move;
       velocity.z = moveSetting.forwardVelocity * forwardInput;
-    } else {
-      velocity.z = 0;
-    }
+      anim.SetFloat("Forward",forwardInput);
+    //} else {
+      //velocity.z = 0;
+    //}
   }
 
   void Turn() {
@@ -85,15 +90,20 @@ public class CharacterController : MonoBehaviour {
       targetRotation *= Quaternion.AngleAxis(moveSetting.rotateVelocity * turnInput * Time.deltaTime,Vector3.up);
     }
     transform.rotation = targetRotation;
+    anim.SetFloat("Turn",turnInput);
   }
 
   void Jump() {
     if(jumpInput > 0 && Grounded()) {
       velocity.y = moveSetting.jumpVelocity;
+      anim.SetBool("OnGround",false);
+      anim.SetFloat("Jump",jumpInput);
     } else if(jumpInput == 0 && Grounded()) {
       velocity.y = 0;
+      anim.SetBool("OnGround",true);
     } else {
       velocity.y -= physicsSetting.downAcceleration;
+      anim.SetFloat("Jump",velocity.y);
     }
   }
 }
