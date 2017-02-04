@@ -750,9 +750,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 968841110}
-  lookSmooth: 0.09
-  offsetFromTarget: {x: 0, y: 1.5, z: -3}
-  xTilt: 10
+  pos:
+    targetOffsetPosition: {x: 0, y: 1.5, z: 0}
+    lookSmooth: 100
+    distanceFromTarget: -5
+    zoomSmooth: 10
+    maxZoom: -2
+    minZoom: -15
+  orbit:
+    xRotation: -20
+    yRotation: -180
+    maxRotationX: 25
+    minRotationX: -85
+    vertOrbitSmooth: 150
+    horOrbitSmooth: 150
+  input:
+    ORBIT_H_SNAP: OrbitHSnap
+    ORBIT_H: RightStickX
+    ORBIT_VERTICAL: RightStickY
+    ZOOM: Mouse ScrollWheel
 --- !u!1 &718415270
 GameObject:
   m_ObjectHideFlags: 0
