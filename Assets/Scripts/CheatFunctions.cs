@@ -4,6 +4,7 @@ using System.Collections;
 public class CheatFunctions : MonoBehaviour {
 
   CheatFunctions instance;
+  public CharacterController charController;
   bool BHEnabled = false;
   bool GiantEnabled = false;
 
@@ -14,10 +15,11 @@ public class CheatFunctions : MonoBehaviour {
       instance = this;
       DontDestroyOnLoad(instance);
     }
+    
   }
 
-  public void InverseGravity() {
-    Physics.gravity = -Physics.gravity;
+  public void SuperJump() {
+    charController.velocity.y = 100;
   }
 
   public void BigHead() {

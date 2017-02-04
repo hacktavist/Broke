@@ -30,7 +30,7 @@ public class CharacterController : MonoBehaviour {
   public MoveSettings moveSetting = new MoveSettings();
   public PhysicsSettings physicsSetting = new PhysicsSettings();
   public InputSettings inputSetting = new InputSettings();
-  Vector3 velocity = Vector3.zero;
+  public Vector3 velocity = Vector3.zero;
   Quaternion targetRotation;
   Rigidbody rbody;
   float forwardInput, turnInput, jumpInput;
@@ -97,10 +97,11 @@ public class CharacterController : MonoBehaviour {
     if(jumpInput > 0 && Grounded()) {
       velocity.y = moveSetting.jumpVelocity;
       anim.SetBool("OnGround",false);
-      anim.SetFloat("Jump",jumpInput);
+      anim.SetFloat("Jump",velocity.y);
     } else if(jumpInput == 0 && Grounded()) {
       velocity.y = 0;
       anim.SetBool("OnGround",true);
+      anim.SetFloat("Jump",0);
     } else {
       velocity.y -= physicsSetting.downAcceleration;
       anim.SetFloat("Jump",velocity.y);
