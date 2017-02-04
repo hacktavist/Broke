@@ -166,7 +166,7 @@ InputManager:
     axis: 4
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Mouse ScrollWheel
+    m_Name: Zoom
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -178,7 +178,7 @@ InputManager:
     sensitivity: 0.1
     snap: 0
     invert: 0
-    type: 1
+    type: 2
     axis: 2
     joyNum: 0
   - serializedVersion: 3
@@ -231,10 +231,10 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: OrbitHSnap
-    descriptiveName: 
+    descriptiveName: Left Bumper
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick button 4
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -242,6 +242,6 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 2
     joyNum: 0

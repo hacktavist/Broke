@@ -109,12 +109,12 @@ public class CameraController : MonoBehaviour {
   }
 
   void ZoomOnTarget() {
-    pos.distanceFromTarget += zoomInput * pos.zoomSmooth;
+    pos.distanceFromTarget += zoomInput * pos.zoomSmooth * Time.deltaTime;
     if(pos.distanceFromTarget > pos.maxZoom) {
       pos.distanceFromTarget = pos.maxZoom;
     }
     if(pos.distanceFromTarget < pos.minZoom) {
-                                             pos.distanceFromTarget = pos.minZoom;
+      pos.distanceFromTarget = pos.minZoom;
     }
   }
 }
