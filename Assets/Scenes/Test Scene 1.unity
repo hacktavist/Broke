@@ -707,7 +707,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.03
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -757,6 +757,10 @@ MonoBehaviour:
     zoomSmooth: 30
     maxZoom: -2
     minZoom: -15
+    smoothing: 1
+    smooth: 0.05
+    newDistance: -8
+    adjustmentDistance: -8
   orbit:
     xRotation: -20
     yRotation: -180
@@ -769,6 +773,16 @@ MonoBehaviour:
     ORBIT_H: RightStickX
     ORBIT_VERTICAL: RightStickY
     ZOOM: Zoom
+  debugSettings:
+    drawDesiredCollisionLines: 1
+    drawAdjustedCollisionLines: 1
+  cHandler:
+    collisionLayer:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    colliding: 0
+    adjustedCameraClipPoints: []
+    desiredCameraClipPoints: []
 --- !u!1 &718415270
 GameObject:
   m_ObjectHideFlags: 0
