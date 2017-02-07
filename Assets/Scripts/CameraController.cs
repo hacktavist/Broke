@@ -119,12 +119,12 @@ public class CameraController : MonoBehaviour {
   void MoveToTarget() {
     //targetPos = target.position + pos.targetOffsetPosition;
     targetPos = target.position + Vector3.up * pos.targetOffsetPosition.y + Vector3.forward * pos.targetOffsetPosition.z + transform.TransformDirection(Vector3.right * pos.targetOffsetPosition.x);
-    dest = Quaternion.Euler(orbit.xRotation,orbit.yRotation /*+ target.eulerAngles.y*/,0) * -Vector3.forward * pos.distanceFromTarget;
+    dest = Quaternion.Euler(orbit.xRotation,orbit.yRotation + target.eulerAngles.y,0) * -Vector3.forward * pos.distanceFromTarget;
     dest += targetPos;
     //transform.position = dest;
 
     if(cHandler.colliding) {
-      adjustedDest = Quaternion.Euler(orbit.xRotation,orbit.yRotation /*+ target.eulerAngles.y*/,0) * Vector3.forward * pos.adjustmentDistance;
+      adjustedDest = Quaternion.Euler(orbit.xRotation,orbit.yRotation + target.eulerAngles.y,0) * Vector3.forward * pos.adjustmentDistance;
       adjustedDest += targetPos;
       if(pos.smoothing) {
         transform.position = Vector3.SmoothDamp(transform.position,adjustedDest,ref camVelocity,pos.smooth);
