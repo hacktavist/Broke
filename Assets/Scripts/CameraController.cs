@@ -117,8 +117,8 @@ public class CameraController : MonoBehaviour {
   }
 
   void MoveToTarget() {
-    //targetPos = target.position + pos.targetOffsetPosition;
-    targetPos = target.position + Vector3.up * pos.targetOffsetPosition.y + Vector3.forward * pos.targetOffsetPosition.z + transform.TransformDirection(Vector3.right * pos.targetOffsetPosition.x);
+    //targetPos = target.position + pos.targetOffsetPosition + target.localScale.y;
+    targetPos = target.position + Vector3.up * pos.targetOffsetPosition.y * target.localScale.y + /*Vector3.up * target.localScale.y + */Vector3.forward * pos.targetOffsetPosition.z + transform.TransformDirection(Vector3.right * pos.targetOffsetPosition.x);
     dest = Quaternion.Euler(orbit.xRotation,orbit.yRotation + target.eulerAngles.y,0) * -Vector3.forward * pos.distanceFromTarget;
     dest += targetPos;
     //transform.position = dest;
