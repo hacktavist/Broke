@@ -82,15 +82,17 @@ public class CheatTest : MonoBehaviour {
                 //return;
             }
 
-                    } //End if for being at the end of the cheat
+          } //End if for being at the end of the cheat
         }  //End if the button matched the cheat index
+        else { code.currentPosition = 0; } //Ends position in code so cheats with similar endings don't activate;
+                                           //Example is cheat with combo A,B is hit, second cheat with combo B,B won't 
+                                           //  hit next time you use A,B again
 
 
       }  //End if position is still within sequence length
 
     
 
-    }
-    //} //End foreach loop
+    } //End foreach loop
   }
 }
