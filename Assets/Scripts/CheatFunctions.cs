@@ -5,6 +5,7 @@ public class CheatFunctions : MonoBehaviour {
 
   CheatFunctions instance;
   public CharacterController charController;
+  public float superHeight = 50f;
   bool BHEnabled = false;
   bool GiantEnabled = false;
 
@@ -19,7 +20,7 @@ public class CheatFunctions : MonoBehaviour {
   }
 
   public void SuperJump() {
-    charController.velocity.y = 100;
+    charController.velocity.y = superHeight;
   }
 
   public void BigHead() {
