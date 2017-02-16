@@ -822,8 +822,7 @@ GameObject:
   - 114: {fileID: 114000011856363652}
   - 54: {fileID: 54000013404643076}
   - 136: {fileID: 136000012305358728}
-  - 114: {fileID: 114000013915149186}
-  - 114: {fileID: 114000010215359586}
+  - 114: {fileID: 114000011208894418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3455,7 +3454,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013693407378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.2406094, y: -0.032411087, z: -2.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4102,7 +4101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011459530926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.2406094, y: -0.032411087, z: -2.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4425,7 +4424,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013537030160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.2406094, y: -0.032411087, z: -2.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -5255,8 +5254,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011385639956}
-  m_LocalRotation: {x: -0, y: -0, z: 0.009722704, w: 0.99995273}
-  m_LocalPosition: {x: 0, y: 0.0407, z: 0}
+  m_LocalRotation: {x: -0, y: 0, z: 0.009433412, w: 0.99995553}
+  m_LocalPosition: {x: -0.002, y: 0.084, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.0810001}
   m_Children:
@@ -5719,7 +5718,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!95 &95000012170928732
 Animator:
@@ -5907,25 +5906,6 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &114000010215359586
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011385639956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 12
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 1
 --- !u!114 &114000010379138278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8146,6 +8126,32 @@ MonoBehaviour:
   isAttached: 1
   isVisible: 1
   backupTexture: {fileID: 2800000, guid: 5960dacdd6e157a42bb83da45a4c1a16, type: 3}
+--- !u!114 &114000011208894418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011385639956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54af0fda5cd41844981a21c70b26b409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSetting:
+    forwardVelocity: 12
+    rotateVelocity: 100
+    jumpVelocity: 25
+    distToGround: 0.7
+    ground:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  physicsSetting:
+    downAcceleration: 0.75
+  inputSetting:
+    inputDelay: 0.1
+    FORWARD_AXIS: Vertical
+    TURN_AXIS: Horizontal
+    JUMP_AXIS: Jump
 --- !u!114 &114000011402901046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17709,17 +17715,6 @@ MonoBehaviour:
   meshType: 0
   originalMesh: {fileID: 0}
   originalBindposes: []
---- !u!114 &114000013915149186
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011385639956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013961125586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18721,10 +18716,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.25
+  m_Height: 1.85
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!137 &137000010135079078
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

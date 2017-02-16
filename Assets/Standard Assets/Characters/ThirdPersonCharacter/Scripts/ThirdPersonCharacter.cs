@@ -42,6 +42,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         Physics.gravity = -Physics.gravity;
       } 
     }
+    
 		void Start()
 		{
 			m_Animator = GetComponent<Animator>();

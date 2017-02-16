@@ -11,7 +11,6 @@ public class CheatTest : MonoBehaviour {
   int currentPosition;
   string tempKey;
   bool sequenceMatched = false;
-  System.Array values = System.Enum.GetValues(typeof(KeyCode));
   static CheatTest instance;
   int cheatIndex;
 
@@ -29,104 +28,22 @@ public class CheatTest : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-    #region
-    if (controller.isConnected == false) {
-      if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-        tempKey = "left";
-      } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
-        tempKey = "right";
-      } else if (Input.GetKeyDown(KeyCode.UpArrow)) {
-        tempKey = "up";
-      } else if (Input.GetKeyDown(KeyCode.DownArrow)) {
-        tempKey = "down";
-      } else if (Input.GetKeyDown(KeyCode.Space)) {
-        tempKey = "jump";
-      } else if (Input.GetKeyDown(KeyCode.Space)) {
-        tempKey = "jump";
-      } else if (Input.GetKeyDown(KeyCode.Mouse0)) {
-        tempKey = "melee";
-      } else if (Input.GetKeyDown(KeyCode.E)) {
-        tempKey = "switch";
-      }
-
-    } else {
-
-      /* This is the work around for controller cheats */
-      //  if(Input.GetButtonDown("Jump")) {
-      //  tempKey = "jump";
-      //}
 
 
-      if (controller.GetButtonDown("dLeft"))
-      {
-        tempKey = "left";
-      }
-      else if (controller.GetButtonDown("dRight"))
-      {
-        tempKey = "right";
-      }
-      else if (controller.GetButtonDown("dUp"))
-      {
-        tempKey = "up";
-      }
-      else if (controller.GetButtonDown("dDown"))
-      {
-        tempKey = "down";
-      }
-      else if (controller.GetButtonDown("A"))
-      {
-        tempKey = "jump";
-      }
-      else if (controller.GetButtonDown("B"))
-      {
-        tempKey = "interact";
-      }
-      else if (controller.GetButtonDown("X"))
-      {
-        tempKey = "melee";
-      }
-      else if (controller.GetButtonDown("Y"))
-      {
-        tempKey = "switch";
-      }
-      else if (controller.GetButtonDown("Start"))
-      {
-        tempKey = "menu";
-      }
-      else if (controller.GetButtonDown("Back"))
-      {
-        tempKey = "options";
-      }
-      else if (controller.GetTriggerTapLeft())
-      {
-        tempKey = "walk";
-      }
-      else if (controller.GetTriggerTapRight())
-      {
-        tempKey = "shoot";
-      }
-      else if (controller.GetButtonDown("lBumper"))
-      {
-        tempKey = "";
-      }
-      else if (controller.GetButtonDown("rBumper"))
-      {
-        tempKey = "";
-      }
-      else if (controller.GetButtonDown("L3"))
-      {
-        tempKey = "";
-      }
-      else if (controller.GetButtonDown("R3"))
-      {
-        tempKey = "";
-      }
-      else
-        tempKey = "";
+    if (Input.GetButtonDown("Jump")) {
+      tempKey = "jump";
+    } else if (Input.GetButtonDown("Switch")) {
+      tempKey = "switch";
+    } else if (Input.GetButtonDown("Reload")) {
+      tempKey = "reload";
+    } else if (Input.GetButtonDown("Melee")) {
+      tempKey = "melee";
     }
-    #endregion
 
-    if(Input.anyKeyDown){
+
+
+
+    if (Input.anyKeyDown){
       CheatCode(tempKey);
       tempKey = "";
     }
