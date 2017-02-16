@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
     public Vector3 targetOffsetPosition = new Vector3(0,3.4f,0);
     public float lookSmooth = 100f;
     public float distanceFromTarget = -8f;
-    public float zoomSmooth = 10f;
+    public float zoomSmooth = 30f;
     public float maxZoom = -2f;
     public float minZoom = -15f;
     public bool smoothing = true;
@@ -25,16 +25,16 @@ public class CameraController : MonoBehaviour {
     public float xRotation = -20f;
     public float yRotation = -180f;
     public float maxRotationX = 25f;
-    public float minRotationX = 85f;
+    public float minRotationX = -85f;
     public float vertOrbitSmooth = 150f;
     public float horOrbitSmooth = 150f;
   }
   [Serializable]
   public class InputSettings {
     public string ORBIT_H_SNAP = "OrbitHSnap";
-    public string ORBIT_H = "RightStickY";
-    public string ORBIT_VERTICAL = "RightStickX";
-    public string ZOOM = "Mouse ScrollWheel";
+    public string ORBIT_H = "RightStickX";
+    public string ORBIT_VERTICAL = "RightStickY";
+    public string ZOOM = "Zoom";
   }
 
   [Serializable]
